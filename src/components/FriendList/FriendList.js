@@ -12,7 +12,7 @@ const FriendList = ({friends}) => {
                         <p class="name">{name}</p>
                     </li>
                 )
-            })};
+            })}
         </ul>
     )
 }
