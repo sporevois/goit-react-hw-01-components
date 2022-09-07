@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
+import css from "./FriendList.module.css"
 
 const FriendList = ({friends}) => {
     return (
-        <ul className="friend-list">
+        <ul className={css.friendList}>
             {friends.map(friend => {
-                const { id, avatar, name} = friend;
+                const { id, avatar, name, isOnline} = friend;
                 return (
-                    <li key={id} className="item">
-                        <span className="status"></span>
-                        <img className="avatar" src={avatar} alt={name} width="48" />
-                        <p className="name">{name}</p>
+                    <li key={id} className={css.item}>
+                        <span className={css[isOnline]}></span>
+                        <img className={css.avatar} src={avatar} alt={name} width="48" />
+                        <p className={css.name}>{name}</p>
                     </li>
                 )
             })}
