@@ -1,0 +1,28 @@
+.transactionHistory{
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 80%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #049a9f;
+    border: 2px solid rgb(10, 94, 97);
+    border-radius: 10px;
+}
+tr th{
+    height: 30px;
+    border: 1px solid grey;
+    font-weight: bold;
+    color: white;
+}
+tbody td{
+    height: 25px;
+    border: 1px solid grey;
+}
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eee7ee;
+}
+
