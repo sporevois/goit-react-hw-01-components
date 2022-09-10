@@ -7,8 +7,7 @@ const Statistics = ({ title, stats }) => {
         <section className={css.statistics}>
             {title && <h2 className={css.title}>{title}</h2>}
             <ul className={css.statList}>
-                {stats.map(item => {
-                    const { id, label, percentage } = item;
+                {stats.map(({ id, label, percentage }) => {
                     const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
                     return (
                         <li key={id} className={css.item} style={{backgroundColor:randomColor}}>
